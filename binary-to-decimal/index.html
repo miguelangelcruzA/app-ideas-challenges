@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   <style>
+       .container{
+           width: 600px;
+           height: 300px;
+           border-radius: 10px;
+           margin: 0 auto;
+           background-color: beige;
+           text-align: center;
+       }
+       #btn{
+        
+           padding: 8px 80px;
+           background-color: rgb(44, 199, 153);
+           border: 0;
+           border-radius: 8px;
+           color: white;
+       }
+       .input-text {
+        border-radius: 5px;
+        padding: 10px;
+        } 
+        .input-field{
+            margin-bottom: 20px;
+        }
+   </style>
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Binary to Decimal</h1>
+        <div class="input-field">
+            <label for=""></label>
+            <input class="input-text" id="input-binary" type="text" maxlength="8">
+        </div>
+        <div class="input-field">
+            <label for=""></label>
+            <input class="input-text" id="input-decimal" type="text" disabled>
+        </div>
+        <div class="input-decimal">
+          <button id="btn" onclick="convert()">Convert</button>
+        </div>       
+    </div>
+  
+    <script>
+            let expression = new RegExp("/[0|1]{1,8}/");
+            let input_field = document.getElementById("input-binary").value;
+
+        function convert(){
+            alert(input_field);
+            let flag = expression.test(input_field);
+
+            if(input_field != ""){
+                if(flag){
+                    
+                }
+                else{
+                    alert("invalid format");
+                }
+
+            }else{
+                alert("ingrese un numero binario");
+            }
+        
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>
